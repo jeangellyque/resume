@@ -3,150 +3,191 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Anzhelika Omelyanchuk — Data Analyst</title>
+  <meta name="description" content="Anzhelika Omelyanchuk - Data Analyst. SQL, Python, Power BI, Tableau. Project experience in marketing analytics, retail dashboards and user funnels.">
+  <title>Anzhelika Omelyanchuk - Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--accent:#1f6feb;--bg:#f7f9fc;--card:#ffffff;--muted:#6b7280}
-    body{font-family:Inter, Roboto, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;line-height:1.5;color:#0f1724;background:var(--bg);padding:24px}
-    .container{max-width:900px;margin:0 auto}
-    .card{background:var(--card);padding:28px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,36,0.06)}
-    header{display:flex;align-items:flex-start;gap:20px}
-    .name{font-size:22px;font-weight:700;margin:0}
-    .title{color:var(--accent);font-weight:600;margin:4px 0 0}
+    :root{--accent:#0b6efd;--muted:#6b7280;--bg:#f7f9fc;--card:#ffffff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;line-height:1.45;color:#0f1724;background:var(--bg);margin:0;padding:28px}
+    .wrap{max-width:980px;margin:0 auto}
+    .paper{background:var(--card);border-radius:10px;box-shadow:0 8px 30px rgba(11,15,30,0.06);overflow:hidden}
+    .grid{display:grid;grid-template-columns: 320px 1fr;gap:28px;padding:28px}
+    header.top{display:flex;align-items:flex-start;gap:20px;padding:28px;border-bottom:1px solid #eef2f6}
+    .name{font-size:24px;font-weight:700;margin:0}
+    .role{color:var(--accent);font-weight:600;margin-top:4px}
     .contact{margin-left:auto;text-align:right;font-size:14px;color:var(--muted)}
-    .section{margin-top:20px}
-    h2{font-size:14px;margin:0 0 10px;color:#0b1220}
-    p.lead{margin:6px 0 0;color:#111827}
-    ul{margin:8px 0 0;padding-left:18px}
-    .two-col{display:grid;grid-template-columns:1fr 280px;gap:20px}
-    .skills li,.tools li{margin-bottom:6px}
-    .projects a{color:var(--accent);text-decoration:none}
-    .meta{font-size:13px;color:var(--muted)}
-    footer{margin-top:18px;font-size:13px;color:var(--muted);text-align:center}
-    @media (max-width:800px){.two-col{grid-template-columns:1fr}header{flex-direction:column}.contact{text-align:left;margin-left:0}}
-    .section-card{background:#fbfdff;padding:14px;border-radius:8px}
+    .sidebar{padding:18px;border-right:1px solid #f1f5f9;background:#fbfdff}
+    .main{padding:18px}
+    h2{font-size:13px;margin:0 0 10px;color:#0b1220}
+    .section{margin-bottom:18px}
+    p{margin:0 0 8px}
+    ul{margin:6px 0 0;padding-left:18px}
+    .muted{color:var(--muted);font-size:13px}
+    .skill-pill{display:inline-block;background:#eef6ff;color:var(--accent);padding:8px 10px;border-radius:8px;font-size:14px;margin:0 6px 6px 0;font-weight:600}
+    a{color:var(--accent);text-decoration:none}
+    .project a{display:inline-block;margin-top:6px}
     .company{font-weight:600}
+    .meta{color:var(--muted);font-size:13px}
+    .job-bullets li{margin-bottom:6px; font-size:14px}
+    footer{padding:18px 28px;border-top:1px solid #eef2f6;color:var(--muted);font-size:13px;text-align:center}
+
+    .sidebar h2{font-size:18px;font-weight:700;color:#071130;margin-bottom:12px}
+    .sidebar .skill-pill{font-size:14px;padding:8px 10px;border-radius:8px}
+    .sidebar .muted{font-size:14px;color:#475569}
+
+    .sidebar{font-size:15px}
+
+    .sidebar .education-block .company{font-size:13px;font-weight:600;color:#0b1220}
+    .sidebar .education-block .meta{font-size:12px;color:#8a9199}
+
+    .main h2{font-size:20px;font-weight:700;color:#071130;margin-bottom:14px}
+
+    .main{font-size:14px;color:#475569}
+    .main .company{font-size:13px;color:#374151;font-weight:600}
+    .main .meta{font-size:12px;color:#8a9199}
+    .project p, .job-bullets li, .main p, .project a{font-size:14px;color:#475569}
+    .project a{color:#6b7280;text-decoration:underline;font-size:14px}
+    .job-bullets li{margin-bottom:6px; font-size:14px}
+
+    .sidebar .languages li{font-size:14px;color:#475569;margin-bottom:6px}
+
+    .main .company a{color:inherit;text-decoration:none}
+
+    .company a, .company a .link-label, .company-link, .company-link .link-label {
+      display:inline;
+      background:transparent !important;
+      color:var(--accent) !important;
+      padding:0 !important;
+      border-radius:0 !important;
+      font-size:14px;
+      font-weight:600;
+      text-decoration:underline;
+      margin-right:6px;
+    }
+    .company a:hover, .company a:hover .link-label, .company-link:hover, .company-link:hover .link-label {
+      color: #0849c6;
+      background: transparent !important;
+    }
+
+    .company a:visited { color: var(--accent); }
+
+    @media (max-width:840px){.grid{grid-template-columns:1fr}.sidebar{border-right:none;border-bottom:1px solid #f1f5f9}}
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <header>
+  <div class="wrap">
+    <div class="paper">
+      <header class="top">
         <div>
           <h1 class="name">Anzhelika Omelyanchuk</h1>
-          <div class="title">Data Analyst</div>
+          <div class="role">Data Analyst</div>
+          <div class="muted" style="margin-top:8px">Rivne, Ukraine</div>
         </div>
-        <div class="contact">
-          <div class="meta">Rivne, Ukraine</div>
-          <div style="margin-top:8px">
-            <div><a href="tel:+380685074941">+38 (068) 507-49-41</a></div>
-            <div><a href="mailto:angelika.omelianchuk@gmail.com">angelika.omelianchuk@gmail.com</a></div>
-            <div><a href="https://t.me/orangela" target="_blank" rel="noopener">Telegram</a></div>
-            <div><a href="https://linkedin.com/in/anzhelika-omelianchuk-037053331" target="_blank" rel="noopener">LinkedIn</a></div>
-          </div>
+        <div class="contact" aria-label="Contact details">
+          <div><a href="tel:+380685074941">+38 (068) 507-49-41</a></div>
+          <div><a href="mailto:angelika.omelianchuk@gmail.com">angelika.omelianchuk@gmail.com</a></div>
+          <div><a href="https://t.me/orangela" target="_blank" rel="noopener noreferrer">Telegram</a></div>
+          <div><a href="https://linkedin.com/in/anzhelika-omelianchuk" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
         </div>
       </header>
 
-      <section class="section">
-        <h2>Summary</h2>
-        <p class="lead">Data Analyst who transforms large volumes of information into clear and accurate insights. Experienced in SQL, Python, Excel, and Power BI for data cleaning, analysis, and visualization. Applies statistical methods, A/B testing, and modeling to produce practical, actionable business insights.</p>
-      </section>
-
-      <div class="section two-col">
-        <div>
-          <section class="section section-card">
-            <h2>Project Experience</h2>
-            <div class="projects">
-              <h3 style="margin:8px 0 6px">Ads Performance Analysis — Marketing Analytics</h3>
-              <div class="meta">(SQL, BigQuery, Google Analytics 4)</div>
-              <p>Analyzed Google & Facebook Ads datasets and built SQL queries for ROMI, reach growth, and campaign performance. Tasks included GA4 event extraction and session-level funnel (visit → cart → checkout → purchase). Identified top-performing campaigns and main funnel drop-offs; prepared datasets for BI dashboards.</p>
-              <ul>
-                <li><a href="#">SQL Tasks (Google & Facebook Ads) — 5 SQL scripts</a></li>
-                <li><a href="https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1spsychic-destiny-474623-c7!2seurope-west3!3s2e7433f8-049c-47d0-b203-6eb82f05836d!2e1" target="_blank" rel="noopener">GA4 Analysis (2021)</a></li>
-                <li><a href="https://console.cloud.google.com/bigquery?ws=!1m7!1m6!12m5!1m3!1spsychic-destiny-474623-c7!2seurope-west3!3sc337ae22-eaaf-4068-8bcf-91d4d094d9b9!2e1" target="_blank" rel="noopener">Conversion Funnel (GA4)</a></li>
-              </ul>
-
-              <h3 style="margin:12px 0 6px">Superstore Sales Dashboard — Retail Analytics</h3>
-              <div class="meta">(Tableau)</div>
-              <p>Built an interactive dashboard analyzing sales, profit, and shipping efficiency. Implemented time-series charts, profitability matrix, delivery analysis, and multi-filter dashboard to highlight profit drivers and shipping delays.</p>
-              <p><a href="https://public.tableau.com/views/SuperstoreAnalytics_17631707199850/Dashboard1?:language=en-US" target="_blank" rel="noopener">View Superstore Dashboard</a></p>
-
-              <h3 style="margin:12px 0 6px">Funnel Actions Dashboard — User Behavior</h3>
-              <div class="meta">(Tableau)</div>
-              <p>Developed interactive funnel dashboard with dynamic action-based filtering to visualize time-to-event metrics and user flow efficiency.</p>
-              <p><a href="https://public.tableau.com/views/Task4_17637719273330/Dashboard1?:language=en-US" target="_blank" rel="noopener">View Funnel Actions</a></p>
-            </div>
-          </section>
-
+      <div class="grid">
+        <aside class="sidebar" aria-label="Sidebar">
           <section class="section">
-            <h2>Work Experience</h2>
-            <div class="section-card">
-              <div class="company">RZVA High-Voltage Union LLC</div>
-              <div class="meta">2011 — 2025</div>
-              <div style="margin-top:8px">
-                <strong>Production Support Specialist / Dispatcher Operator / Commodity Expert</strong>
-                <ul>
-                  <li>Supported production preparation processes including documentation, planning, and coordination.</li>
-                  <li>Managed inventory, controlled material flow, and monitored stock accuracy.</li>
-                  <li>Ensured timely supply of components and maintained structured reporting.</li>
-                  <li>Communicated across departments to support continuous manufacturing processes.</li>
-                </ul>
-                <p><strong>Achievements:</strong> Improved internal documentation flow reducing delays; established more accurate inventory tracking, minimizing shortages and overstock.</p>
-              </div>
-            </div>
-          </section>
-
-        </div>
-
-        <aside>
-          <section class="section">
-            <h2>Skills</h2>
-            <div class="section-card">
-              <ul class="skills">
-                <li>Data gathering, cleaning, and preprocessing</li>
-                <li>Statistical analysis and clear visual insights</li>
-                <li>SQL, Python, Excel</li>
-                <li>Power BI, Tableau</li>
-                <li>Strong analytical mindset & problem-solving</li>
-              </ul>
+            <h2>Hard skills</h2>
+            <div>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Python</span>
             </div>
           </section>
 
           <section class="section">
             <h2>Tools</h2>
-            <div class="section-card">
-              <ul class="tools">
-                <li>Google Sheets</li>
-                <li>PostgreSQL, BigQuery</li>
-                <li>PyCharm, DBeaver, Jupyter Notebook</li>
-                <li>Google Analytics 4, Amplitude</li>
-                <li>Power BI, Tableau, Looker Studio</li>
-              </ul>
-            </div>
+            <p class="muted">PostgreSQL · BigQuery · Jupyter · PyCharm · DBeaver · GA4 · Amplitude · Tableau · Looker Studio · Excel · GitHub</p>
           </section>
 
-          <section class="section">
+          <section class="section education-block">
             <h2>Education</h2>
-            <div class="section-card">
-              <div><strong>IT School GoIT</strong><div class="meta">2025 — Data Analysis (Bootcamp)</div></div>
-              <div style="margin-top:8px"><strong>National University of Water and Environmental Engineering</strong><div class="meta">2010 - 2014 — Bachelor's Degree in Accounting and Audit</div></div>
+            <div>
+              <div class="company">IT School GoIT</div>
+              <div class="meta">2025 - Data Analysis (Bootcamp)</div>
+            </div>
+            <div style="margin-top:10px">
+              <div class="company">National University of Water and Environmental Engineering</div>
+              <div class="meta">2010–2014 - Specialist Degree in Accounting and Audit</div>
             </div>
           </section>
 
           <section class="section">
             <h2>Languages</h2>
-            <div class="section-card">
+            <ul class="languages">
+              <li>English - Intermediate</li>
+              <li>Ukrainian - Native</li>
+            </ul>
+          </section>
+        </aside>
+
+        <main class="main" role="main">
+          <section class="section">
+            <h2>Summary</h2>
+            <p>Data Analyst who transforms large volumes of information into clear and actionable insights. Experienced in SQL, Python (Pandas, NumPy, Matplotlib), Power BI and Tableau. I apply statistical methods and A/B testing to solve problems and support data-driven decisions.</p>
+          </section>
+
+          <section class="section">
+            <h2>Project experience</h2>
+
+            <div class="project">
+              <div class="company"><a href="https://public.tableau.com/views/SuperstoreAnalytics_17631707199850/Dashboard1?:language=en-US" target="_blank" rel="noopener noreferrer" title="View dashboard: Superstore Sales Dashboard - Retail Analytics" aria-label="Open Superstore Sales Dashboard in a new tab">Superstore Sales Dashboard - Retail Analytics</a></div>
+              <div class="meta">Tools: SQL · Tableau</div>
+              <p><strong>Summary:</strong> Built an interactive dashboard analyzing sales, profit and shipping efficiency.</p>
+              <p><strong>Idea:</strong> Provide stakeholders an at-a-glance, filterable view to monitor sales performance and identify operational bottlenecks in shipping and fulfillment.</p>
+              <p><strong>Tasks:</strong></p>
               <ul>
-                <li>English — Upper-Intermediate</li>
-                <li>Ukrainian — Native</li>
+                <li>Design and implement SQL extracts to prepare aggregated sales and shipping datasets.</li>
+                <li>Build time-series charts, profitability matrix and delivery-efficiency views in Tableau.</li>
+                <li>Create interactive multi-filter dashboard and drill-downs to enable ad-hoc analysis.</li>
               </ul>
+              <p><strong>Result:</strong> Highlighted profit drivers and shipping delays; improved clarity of business performance and enabled faster stakeholder decision-making.</p>
+            </div>
+
+            <div style="margin-top:12px" class="project">
+              <div class="company"><a href="https://public.tableau.com/views/Task4_17637719273330/Dashboard1?:language=en-US" target="_blank" rel="noopener noreferrer" title="View dashboard: Funnel Actions Dashboard - User Behavior" aria-label="Open Funnel Actions Dashboard in a new tab">Funnel Actions Dashboard - User Behavior</a></div>
+              <div class="meta">Tools: SQL · Tableau (Actions, Parameters)</div>
+              <p><strong>Summary:</strong> Developed interactive funnel dashboard with dynamic action-based filtering.</p>
+              <p><strong>Idea:</strong> Visualize user journeys and time-to-event metrics to surface where users drop out of the funnel and how long each step takes.</p>
+              <p><strong>Tasks:</strong></p>
+              <ul>
+                <li>Extract and transform GA4/session-level events via SQL to construct funnel stages.</li>
+                <li>Use Tableau Actions and Parameters to enable dynamic filtering and segment comparisons.</li>
+                <li>Calculate time-to-event and conversion metrics for each funnel stage.</li>
+              </ul>
+              <p><strong>Result:</strong> Visualized time-to-event metrics and user flow efficiency, making funnel drop-offs and latency transparent for optimization initiatives.</p>
+            </div>
+
+          </section>
+
+          <section class="section">
+            <h2>Work experience</h2>
+            <div>
+              <div class="company">RZVA High-Voltage Union LLC</div>
+              <div class="meta">2011–2025</div>
+              <div style="margin-top:8px"><strong>Production Support Specialist / Dispatcher Operator / Commodity Expert</strong></div>
+              <ul class="job-bullets">
+                <li>Supported production preparation processes: documentation, planning and coordination - improved hand-off clarity.</li>
+                <li>Managed inventory and material flow; introduced structured checks that reduced stock discrepancies.</li>
+                <li>Maintained reporting for stakeholders and coordinated supplier deliveries to ensure timely supply.</li>
+                <li>Collaborated across production, procurement and planning to support continuous operations.</li>
+              </ul>
+              <p style="margin-top:8px"><strong>Achievements:</strong> Improved documentation flow and inventory tracking, reducing delays and minimizing shortages/overstock.</p>
             </div>
           </section>
 
-        </aside>
+        </main>
       </div>
 
       <footer>
-        <div class="meta">This resume is published as a single static HTML file suitable for GitHub Pages.</div>
       </footer>
     </div>
   </div>
